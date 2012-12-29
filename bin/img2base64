@@ -4,9 +4,4 @@ lib = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'img2base64'
 
-if ARGV.size != 1
-  puts "Usage: img2base64 <FILE>"
-  exit
-end
-
-puts Img2Base64.encode(File.expand_path(ARGV[0]))
+Img2Base64::CLI.new($stdout).run(ARGV)
