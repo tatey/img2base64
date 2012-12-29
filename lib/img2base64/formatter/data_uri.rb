@@ -1,6 +1,6 @@
 module Img2Base64
   module Formatter
-    class Image
+    class DataURI
       attr_reader :file
 
       def initialize file
