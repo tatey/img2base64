@@ -10,7 +10,8 @@ Convert this...
 
 ## Installation
 
-    $ gem install img2base64
+    $ git clone git://github.com/tatey/img2base64.git
+    $ rake install
 
 ## Usage
 
