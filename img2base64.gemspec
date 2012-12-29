@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Img2Base64::VERSION
   gem.authors       = ["Tate Johnson"]
   gem.email         = ["tate@tatey.com"]
-  gem.description   = %q{Convert image to base64 encoded string}
-  gem.summary       = %q{Convert image to base64 encoded string}
+  gem.description   = %q{CLI tool to convert image to base64 encoded string with content type}
+  gem.summary       = %q{CLI tool to convert image to base64 encoded string with content type}
   gem.homepage      = "https://github.com/tatey/img2base64"
 
   gem.files         = `git ls-files`.split($/)
