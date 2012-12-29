@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby -KU
+
+require 'base64'
+
+class MimeType
+  def initialize id, range, header
+    @id     = id
+    @range  = range
+    @header = header
+  end
+
+  def id
+    @id
+  end
+
+  def match? data
+    data[@range] == @header
+  end
+end
+
+class Image
+  MIME_TYPES = [
+    MimeType.new('image/gif', 0...4, 'GIF8'),
+    MimeType.new('image/jpg', 0...4, "\xFF\xD8\xFF\xE0"),
+    MimeType.new('image/png', 0...4, "\x89PNG")
+  ]
+
+  def initialize data
+    @data = data
+  end
+
+  def base64
+    Base64.encode64(@data).gsub(/\r|\n/, '')
+  end
+
+  def mime_type
+    MIME_TYPES.find { |mime_type| mime_type.match? @data }.id
+  end
+
+  def src
+    "data:#{mime_type};base64,#{base64}"
+  end
+
+  def self.file path
+    new File.read(File.expand_path(path))
+  end
+end
+
+if ARGV.size != 1
+  puts "Usage: img2base64 <FILE>"
+  exit
+end
+
+path  = File.expand_path ARGV[0]
+image = Image.file path
+
+puts image.src
