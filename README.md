@@ -10,6 +10,8 @@ Convert this...
 
 ## Installation
 
+Img2base64 is a gem. Build and install using rake.
+
     $ git clone git://github.com/tatey/img2base64.git
     $ rake install
 
