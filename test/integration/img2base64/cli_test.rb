@@ -32,6 +32,11 @@ class Img2Base64::CLITest < MiniTest::Unit::TestCase
     assert_includes @out.string, '![](data:image/jpg;base64,/9j/'
   end
 
+  def test_version_command
+    @cli.run ['version']
+    assert_includes @out.string, Img2Base64::VERSION
+  end
+
   def test_empty_with_path_prints_data_uri
     @cli.run [path('grumpycat.jpg')]
     assert_includes @out.string, 'data:image/jpg;base64,/9j/'

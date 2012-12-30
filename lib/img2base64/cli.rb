@@ -1,6 +1,7 @@
 require 'img2base64/file'
 require 'img2base64/formatter/data_uri'
 require 'img2base64/formatter/markdown'
+require 'img2base64/version'
 
 module Img2Base64
   class CLI
@@ -40,6 +41,10 @@ module Img2Base64
         return
       end
       out.puts formatter.new(File.new(read(path))).to_formatted_s
+    end
+
+    def version_command args
+      out.puts "img2base64 #{Img2Base64::VERSION} (Ruby #{RUBY_VERSION})"
     end
 
     def read path
