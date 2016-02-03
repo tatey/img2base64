@@ -30,9 +30,19 @@ Type this
 
     $ img2base64 ~/Desktop/grumpycat.jpg -f markdown
 
-And get a markdown image with the Data URI
+And get a Markdown image with the Data URI
 
     ![](data:image/jpg;base64,/9j/4AAQSkZJRgABAQ...)
+
+### HTML
+
+Type this
+
+    $ img2base64 ~/Desktop/grumpycat.jpg -f html
+
+And get a HTML image with the Data URI
+
+    <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQ...">
 
 ### Data URI
 
@@ -46,4 +56,4 @@ And get the raw Data URI string
 
 ## License
 
-Copyright © 2012 Tate Johnson. Released under the MIT license. See LICENSE.
+Copyright © 2016 Tate Johnson. Released under the MIT license. See LICENSE.

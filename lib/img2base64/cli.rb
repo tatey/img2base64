@@ -1,13 +1,15 @@
 require 'img2base64/file'
 require 'img2base64/formatter/data_uri'
 require 'img2base64/formatter/markdown'
+require 'img2base64/formatter/html'
 require 'img2base64/version'
 
 module Img2Base64
   class CLI
     FORMATS = {
       '-f datauri'  => Formatter::DataURI,
-      '-f markdown' => Formatter::Markdown
+      '-f markdown' => Formatter::Markdown,
+      '-f html' => Formatter::HTML
     }
 
     attr_reader :out
@@ -31,6 +33,7 @@ module Img2Base64
       out.puts 'Usage: img2base64 <FILE> [-f format]'
       out.puts '       img2base64 ~/screenshot.png'
       out.puts '       img2base64 ~/screenshot.png -f markdown'
+      out.puts '       img2base64 ~/screenshot.png -f html'
     end
 
     def encode_command args
