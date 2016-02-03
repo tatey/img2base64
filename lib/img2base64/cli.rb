@@ -20,7 +20,7 @@ module Img2Base64
 
     def run argv
       command = "#{argv[0]}_command"
-      if respond_to? command
+      if respond_to? command, true
         send command, argv[1..-1]
       else
         encode_command argv
