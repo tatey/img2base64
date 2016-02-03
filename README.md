@@ -8,6 +8,8 @@ Convert this...
 
     ![](data:image/jpg;base64,/9j/4AAQSkZJRgABAQ...)
 
+NOTE: GitHub strips base64 encoded images when rendering Markdown. Be sure to enable this when using your own renderer (Eg: Redcarpet with Jekyll).
+
 ## Installation
 
 Img2base64 is a gem. Build and install using rake.
