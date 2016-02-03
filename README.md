@@ -54,6 +54,16 @@ And get the raw Data URI string
 
     data:image/jpg;base64,/9j/4AAQSkZJRgABAQ...
 
+### Developing and Testing
+
+First, install the gem's development dependencies.
+
+    $ bundle
+
+Then, run the test suite.
+
+    $ [bundle exec] rake
+
 ## License
 
 Copyright © 2016 Tate Johnson. Released under the MIT license. See LICENSE.
