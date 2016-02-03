@@ -2,7 +2,7 @@ require 'helper'
 require 'img2base64/file'
 require 'img2base64/mime_type'
 
-class Img2Base64::FileTest < MiniTest::Unit::TestCase
+class Img2Base64::FileTest < MiniTest::Test
   def test_encoder_defaults_to_base64
     assert_equal Base64, Img2Base64::File.new('').encoder
   end

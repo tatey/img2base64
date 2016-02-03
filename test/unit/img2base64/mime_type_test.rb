@@ -1,7 +1,7 @@
 require 'helper'
 require 'img2base64/mime_type'
 
-class Img2Base64::MimeTypeTest < MiniTest::Unit::TestCase
+class Img2Base64::MimeTypeTest < MiniTest::Test
   def setup
     @mime_type = Img2Base64::MimeType.new 'image/gif', 0...4, 'GIF8'
   end

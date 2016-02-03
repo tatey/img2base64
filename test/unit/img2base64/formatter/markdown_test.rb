@@ -1,7 +1,7 @@
 require 'helper'
 require 'img2base64/formatter/markdown'
 
-class Img2Base64::Formatter::MarkdownTest < MiniTest::Unit::TestCase
+class Img2Base64::Formatter::MarkdownTest < MiniTest::Test
   def test_data_uri_defaults_to_data_uri
     assert_equal Img2Base64::Formatter::DataURI, Img2Base64::Formatter::Markdown.new(Object.new).data_uri
   end

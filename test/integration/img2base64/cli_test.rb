@@ -2,7 +2,7 @@ require 'helper'
 require 'img2base64/cli'
 require 'stringio'
 
-class Img2Base64::CLITest < MiniTest::Unit::TestCase
+class Img2Base64::CLITest < MiniTest::Test
   def setup
     @out = StringIO.new
     @cli = Img2Base64::CLI.new @out

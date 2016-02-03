@@ -1,7 +1,7 @@
 require 'helper'
 require 'img2base64/registry'
 
-class Img2Base64::RegistryTest < MiniTest::Unit::TestCase
+class Img2Base64::RegistryTest < MiniTest::Test
   def test_mime_type_is_mime_type
     assert_equal Img2Base64::MimeType, Img2Base64::Registry.new.mime_type
   end

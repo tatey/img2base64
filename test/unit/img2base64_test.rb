@@ -1,7 +1,7 @@
 require 'helper'
 require 'img2base64'
 
-class Img2Base64Test < MiniTest::Unit::TestCase
+class Img2Base64Test < MiniTest::Test
   def test_registry_gif
     gif = Img2Base64::Registry.default.mime_types[0]
     assert_equal 'image/gif', gif.mime_type
